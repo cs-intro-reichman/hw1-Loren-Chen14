@@ -17,6 +17,6 @@ public class Bill3 {
         check= input.nextDouble(); // gets the check value from user
 
         payment= Math.ceil((check/3)); // payment caculation
-        System.out.println("Dear "+ name3 + ", " + name2 + ", and " + name1 + ": Pay " + payment + " Shekels each."); // output stracture
+        System.out.println("Dear "+ name3 + ", " + name2 + ", and " + name1 + ": pay " + payment + " Shekels each."); // output stracture
     }
 }
