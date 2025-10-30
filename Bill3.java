@@ -9,13 +9,13 @@ public class Bill3 {
         String name2; // variable for the second name
         String name3; // variable for the third name
         double check; // variable for the check value
-        double payment; // variable for the payment for each one 
-        System.out.print("enter your names : "); // statement for all 3 name inputs
-        name1= input.nextLine();
-        name2= input.nextLine();
-        name3= input.nextLine();
-        System.out.print("enter your check : "); // statement for the check input
-        check= input.nextDouble();
+        double payment; // variable for the payment for each diner 
+
+        name1= input.nextLine(); // gets the fist name from user
+        name2= input.nextLine(); // gets the second name from user
+        name3= input.nextLine(); // gets the third name from user
+        check= input.nextDouble(); // gets the check value from user
+
         payment= Math.ceil((check/3)); // payment caculation
         System.out.println("Dear "+ name3 + ", " + name2 + ", and " + name1 + ": Pay " + payment + " Shekels each."); // output stracture
     }
