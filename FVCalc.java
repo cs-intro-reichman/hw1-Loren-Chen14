@@ -11,7 +11,7 @@ public class FVCalc {
 
 		futureValue= (Math.pow(rate+1,n)) * currentValue ;  							// futere value formula
 
-		System.out.println("After " + n + " years $" + currentValue + " saved at " + rate + "% will yield $" + (int)futureValue); // output stracture
+		System.out.println("After " + n + " years $" + currentValue + " saved at " + (rate*100) + "% will yield $" + (int)futureValue); // output stracture
 	
 	}
 }

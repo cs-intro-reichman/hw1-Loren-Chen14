@@ -24,11 +24,19 @@ public class TimeFormat {
 
 		// checking if its midnight -> AM
 		else if (hours == 00) {
-			hours = 12;													// changing time format to 12
+			hours = 0;													// changing time format to 12
 			if(minutes < 10){											// minutes checking like before
 				System.out.println(hours + ":0" + minutes + " AM");
 		    }
 		    else System.out.println(hours + ":" + minutes + " AM");
+		}
+
+		// checking if its noon -> 12 PM
+		else if (hours == 12) {										
+			if(minutes < 10){											// minutes checking like before
+				System.out.println(hours + ":0" + minutes + " PM");
+		    }
+		    else System.out.println(hours + ":" + minutes + " PM");
 		}
 
 		// we remain with hour=<12 means AM checking like before
