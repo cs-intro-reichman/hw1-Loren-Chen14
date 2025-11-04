@@ -13,33 +13,34 @@ public class TimeFormat {
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
 
-		String minStr = "";
-
-		if(minutes < 10){											// checking if we need to add 0 before minutes print
-			minStr = "0" + minutes ;        	                 	// adding 0
-		}
-
-
 		// checking if it PM
 		if (hours > 12) {
            hours-=12; 													// changing hour format
-		   System.out.println(hours + ":" + minStr + " PM");      		// printing regular
+		   if(minutes < 10){											// checking if we need to add 0 before minutes print
+				System.out.println(hours + ":0" + minutes + " PM");     // printing with adding 0
+		   } else System.out.println(hours + ":" + minutes + " PM");    // printing regular
 		}
 
 		// checking if its midnight -> AM
 		else if (hours == 00) {
 			hours = 0;													// changing time format to 12
-		    System.out.println(hours + ":" + minStr + " AM");
+			if(minutes < 10){											// minutes checking like before
+				System.out.println(hours + ":0" + minutes + " AM");
+		    } else System.out.println(hours + ":" + minutes + " AM");
 		}
 
 		// checking if its noon -> 12 PM
 		else if (hours == 12) {										
- 			System.out.println(hours + ":" + minStr + " PM");
+			if(minutes < 10){											// minutes checking like before
+				System.out.println(hours + ":0" + minutes + " PM");
+		    } else System.out.println(hours + ":" + minutes + " PM");
 		}
 
 		// we remain with hour=<12 means AM checking like before
 		else {															
-			 System.out.println(hours + ":" + minutes + " AM");
+			if(minutes < 10){
+				System.out.println(hours + ":0" + minutes + " AM");
+		    } else System.out.println(hours + ":" + minutes + " AM");
 		}
 		
 		
